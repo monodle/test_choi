@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { usePortfolio } from './hooks/usePortfolio';
 import { useTheme } from './hooks/useTheme';
 import { Header, TabType } from './components/Header';
-import { HeroSection } from './components/HeroSection';
-import { ProjectGrid } from './components/ProjectGrid';
+import { HomeSection } from './components/HomeSection';
+import { ProjectsSection } from './components/ProjectsSection';
 import { ProjectModal } from './components/ProjectModal';
 import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
@@ -13,7 +13,7 @@ import { ProjectItem } from './types/portfolio';
 export const App: React.FC = () => {
   const { data, loading } = usePortfolio();
   const { theme, toggleTheme } = useTheme();
-  const [activeTab, setActiveTab] = useState<TabType>('PROJECT');
+  const [activeTab, setActiveTab] = useState<TabType>('HOME');
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
   if (loading && !data) {
@@ -57,30 +57,29 @@ export const App: React.FC = () => {
 
       {/* Main Content */}
       <main className="main-content">
-        {/* TAB 1: PROJECT */}
-        {activeTab === 'PROJECT' && (
-          <div className="animate-fadeIn">
-            {/* Rich Designer Hero Section */}
-            <HeroSection
-              profile={profile}
-              skills={about.skills}
-              totalProjects={projects.length}
-              clientCount={about.clients?.length || 39}
-              onNavigate={setActiveTab}
-            />
-
-            {/* 115 Project Works Grid */}
-            <ProjectGrid
-              projects={projects}
-              onSelectProject={setSelectedProject}
-            />
-          </div>
+        {/* TAB 1: HOME */}
+        {activeTab === 'HOME' && (
+          <HomeSection
+            profile={profile}
+            about={about}
+            projects={projects}
+            onNavigate={setActiveTab}
+            onSelectProject={setSelectedProject}
+          />
         )}
 
-        {/* TAB 2: ABOUT */}
+        {/* TAB 2: PROJECTS */}
+        {activeTab === 'PROJECTS' && (
+          <ProjectsSection
+            projects={projects}
+            onSelectProject={setSelectedProject}
+          />
+        )}
+
+        {/* TAB 3: ABOUT */}
         {activeTab === 'ABOUT' && <AboutSection about={about} />}
 
-        {/* TAB 3: CONTACT */}
+        {/* TAB 4: CONTACT */}
         {activeTab === 'CONTACT' && <ContactSection contact={contact} />}
       </main>
 

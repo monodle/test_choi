@@ -102,7 +102,10 @@ export interface PortfolioData {
 
 ---
 
-## 5. GitHub Pages 배포 규약
-- `vite.config.ts`의 `base` 경로는 `./`로 설정하여 서브 경로 배포 시 에셋 404 방지
-- `.github/workflows/deploy.yml`을 통해 main/master 브랜치 푸시 시 자동 빌드 및 배포
-- `npm run build`를 통해 TypeScript 컴파일 및 번들링 에러 사전 검증 필수
+## 5. 검증 및 배포 규약
+- **검증 방식**: `npm run build`를 실행하여 빌드 오류가 없는지 확인합니다.
+- **Vite & 배포 설정**:
+  - `vite.config.ts`의 `base` 경로는 `./`로 설정하여 서브 경로 배포 시 에셋 404 방지
+  - `.github/workflows/deploy.yml`을 통해 main/master 브랜치 푸시 시 자동 빌드 및 배포
+
+

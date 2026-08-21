@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { PortfolioData } from '../types/portfolio';
+import { PortfolioData, ProfileInfo, AboutInfo, ContactInfo, ProjectItem } from '../types/portfolio';
 
 const initialEmptyData: PortfolioData = {
   profile: {
     name: '',
     role: '',
     bio: '',
+    tickerKeywords: [],
+    designPillars: [],
   },
   about: {
     intro: '',
@@ -44,21 +46,37 @@ export function usePortfolio(): UsePortfolioResult {
         // Base-relative URL for GitHub Pages compatibility
         const basePath = import.meta.env.BASE_URL || './';
         const normalizedBase = basePath.endsWith('/') ? basePath : `${basePath}/`;
-        const res = await fetch(`${normalizedBase}data/portfolio.json`);
 
-        if (!res.ok) {
-          throw new Error(`Failed to load portfolio.json: status ${res.status}`);
+        const [profileRes, aboutRes, contactRes, projectsRes] = await Promise.all([
+          fetch(`${normalizedBase}data/profile.json`),
+          fetch(`${normalizedBase}data/about.json`),
+          fetch(`${normalizedBase}data/contact.json`),
+          fetch(`${normalizedBase}data/projects.json`),
+        ]);
+
+        if (!profileRes.ok || !aboutRes.ok || !contactRes.ok || !projectsRes.ok) {
+          throw new Error('Failed to load one or more modular data files');
         }
 
-        const json: PortfolioData = await res.json();
+        const profile: ProfileInfo = await profileRes.json();
+        const about: AboutInfo = await aboutRes.json();
+        const contact: ContactInfo = await contactRes.json();
+        const projects: ProjectItem[] = await projectsRes.json();
+
         if (!isMounted) return;
 
-        if (json && Array.isArray(json.projects)) {
-          setData(json);
-        }
+        setData({
+          profile,
+          about,
+          contact,
+          totalProjects: projects.length,
+          tickerKeywords: profile.tickerKeywords,
+          designPillars: profile.designPillars,
+          projects,
+        });
       } catch (err) {
         if (!isMounted) return;
-        console.error('Failed to load portfolio.json:', err);
+        console.error('Failed to load portfolio data:', err);
         setError(err instanceof Error ? err : new Error(String(err)));
       } finally {
         if (isMounted) {
@@ -76,3 +94,5 @@ export function usePortfolio(): UsePortfolioResult {
 
   return { data, loading, error };
 }
+
+

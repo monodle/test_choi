@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { Theme } from '../hooks/useTheme';
 
-export type TabType = 'PROJECT' | 'ABOUT' | 'CONTACT';
+export type TabType = 'HOME' | 'PROJECTS' | 'ABOUT' | 'CONTACT';
 
 interface HeaderProps {
   activeTab: TabType;
@@ -36,14 +36,14 @@ export const Header: React.FC<HeaderProps> = ({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const navItems: TabType[] = ['PROJECT', 'ABOUT', 'CONTACT'];
+  const navItems: TabType[] = ['HOME', 'PROJECTS', 'ABOUT', 'CONTACT'];
 
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-inner">
         {/* Brand Logo */}
         <button
-          onClick={() => handleNavClick('PROJECT')}
+          onClick={() => handleNavClick('HOME')}
           className="brand-logo"
           aria-label="Home"
         >

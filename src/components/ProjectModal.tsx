@@ -104,7 +104,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* 1-Line Compact Title on Scroll */}
           <div className="detail-compact-title-wrap">
-            <span className="detail-compact-badge">{project.category || 'Portfolio'}</span>
+            <span className="detail-compact-badge">{project.category?.trim() || '미지정'}</span>
             <span className="detail-compact-title" title={project.title}>
               {project.title}
             </span>

@@ -13,10 +13,20 @@ export interface ProjectItem {
   alt: string;
 }
 
+export interface DesignPillar {
+  num: string;
+  title: string;
+  subtitle?: string;
+  desc: string;
+  icon?: string;
+}
+
 export interface ProfileInfo {
   name: string;
   role: string;
   bio: string;
+  tickerKeywords?: string[];
+  designPillars?: DesignPillar[];
 }
 
 export interface ExperienceItem {
@@ -51,5 +61,8 @@ export interface PortfolioData {
   about: AboutInfo;
   contact: ContactInfo;
   totalProjects: number;
+  tickerKeywords?: string[];
+  designPillars?: DesignPillar[];
   projects: ProjectItem[];
 }
+

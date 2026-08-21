@@ -87,7 +87,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
             <div className="stat-info">
               <span className="stat-number">{totalProjects}+</span>
-              <span className="stat-label">Archived Works</span>
+              <span className="stat-label">Total Projects</span>
             </div>
           </div>
 

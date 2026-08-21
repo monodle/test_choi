@@ -66,7 +66,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) =>
           <div className="card-overlay-content">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <span className="card-tag">
-                {project.category || 'Portfolio'}
+                {project.category?.trim() || '미지정'}
               </span>
               <div style={{
                 width: 28,

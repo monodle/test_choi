@@ -216,9 +216,9 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
               <Sparkles size={13} style={{ color: 'var(--accent-gold)' }} />
               <span>CURATED HIGHLIGHTS</span>
             </div>
-            <h2 className="section-main-title">Selected Works</h2>
+            <h2 className="section-main-title">Project Works & Portfolio</h2>
             <p className="section-sub-desc">
-              완성도와 사용자 경험을 집약한 주요 프로젝트 목록입니다.
+              20년간 제작된 다양한 프로젝트 목록입니다.
             </p>
           </div>
           <button
@@ -334,7 +334,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
       {about.clients && about.clients.length > 0 && (
         <section className="home-clients-section">
           <div className="clients-header">
-            <span className="clients-title-tag">BRAND PARTNERSHIPS & COLLABORATIONS</span>
+            <span className="clients-title-tag">Clients & Partnerships</span>
             <h3 className="clients-subheading">20년간 함께 가치를 만들어온 파트너</h3>
           </div>
           <div className="clients-chips-wall">

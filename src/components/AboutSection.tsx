@@ -1,40 +1,17 @@
 import React, { useState } from 'react';
 import { AboutInfo } from '../types/portfolio';
-import { ChevronDown, ChevronUp, Briefcase, Wrench, Code2, Building2, ChevronsUpDown } from 'lucide-react';
+import { Briefcase, Wrench, Code2, Building2 } from 'lucide-react';
 
 interface AboutSectionProps {
   about: AboutInfo;
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ about }) => {
-  // All years expanded by default
-  const [expandedYears, setExpandedYears] = useState<Set<string>>(() => {
-    return new Set(about.experience.map((g) => g.year));
-  });
   const [imageError, setImageError] = useState(false);
 
-  const allYears = about.experience.map((g) => g.year);
-  const isAllExpanded = expandedYears.size === allYears.length;
-
-  const toggleYear = (year: string) => {
-    setExpandedYears((prev) => {
-      const next = new Set(prev);
-      if (next.has(year)) {
-        next.delete(year);
-      } else {
-        next.add(year);
-      }
-      return next;
-    });
-  };
-
-  const toggleAllYears = () => {
-    if (isAllExpanded) {
-      setExpandedYears(new Set());
-    } else {
-      setExpandedYears(new Set(allYears));
-    }
-  };
+  const startYear = about.experience[about.experience.length - 1]?.year || '2002';
+  const endYear = about.experience[0]?.year || '2018';
+  const totalProjects = about.experience.reduce((acc, curr) => acc + curr.items.length, 0);
 
   // Base URL normalization for GitHub Pages compatibility
   const basePath = import.meta.env.BASE_URL || './';
@@ -116,48 +93,42 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ about }) => {
         </div>
       </div>
 
-      {/* Career History (Expanded by default) */}
+      {/* Career History & Projects (Center-Spine History Timeline) */}
       <div className="about-timeline-section">
         <div className="timeline-top-header">
           <div className="section-subheading">
             <Briefcase size={16} className="subheading-icon" />
             <span>Career History & Projects</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <span className="timeline-range-badge">2002 — 2018</span>
-            <button
-              onClick={toggleAllYears}
-              className="detail-action-btn"
-              style={{ padding: '4px 10px', fontSize: '0.7rem', border: '1px solid var(--border-subtle)' }}
-              title={isAllExpanded ? 'Collapse All' : 'Expand All'}
-            >
-              <ChevronsUpDown size={13} />
-              <span>{isAllExpanded ? 'Collapse All' : 'Expand All'}</span>
-            </button>
+          <div className="timeline-header-badges">
+            <span className="timeline-range-badge">{startYear} — {endYear}</span>
+            <span className="timeline-total-badge">{totalProjects} Projects</span>
           </div>
         </div>
 
-        <div className="timeline-accordion">
-          {about.experience.map((group) => {
-            const isExpanded = expandedYears.has(group.year);
-            return (
-              <div key={group.year} className="timeline-item">
-                <button
-                  onClick={() => toggleYear(group.year)}
-                  className="timeline-header"
-                  aria-expanded={isExpanded}
-                >
-                  <div className="timeline-header-left">
-                    <span className="timeline-year">{group.year}</span>
-                    <span className="timeline-count">{group.items.length} works</span>
-                  </div>
-                  <div className="timeline-toggle-icon">
-                    {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-                  </div>
-                </button>
+        <div className="history-timeline">
+          <div className="timeline-spine-line" />
 
-                {isExpanded && (
-                  <div className="timeline-body">
+          {about.experience.map((group, index) => {
+            const isLeft = index % 2 === 0;
+            return (
+              <div
+                key={group.year}
+                className={`timeline-milestone ${isLeft ? 'milestone-left' : 'milestone-right'}`}
+              >
+                {/* Center node dot */}
+                <div className="timeline-center-node" title={group.year}>
+                  <div className="timeline-node-dot" />
+                </div>
+
+                {/* Timeline Card */}
+                <div className="timeline-card">
+                  <div className="timeline-card-header">
+                    <div className="timeline-card-year">{group.year}</div>
+                    <span className="timeline-card-badge">{group.items.length} works</span>
+                  </div>
+
+                  <div className="timeline-card-body">
                     {group.items.map((item, idx) => (
                       <div key={idx} className="timeline-entry">
                         <div className="timeline-entry-header">
@@ -168,7 +139,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ about }) => {
                       </div>
                     ))}
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

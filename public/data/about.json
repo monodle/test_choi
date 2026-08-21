@@ -69,6 +69,26 @@
   ],
   "experience": [
     {
+      "year": "2024",
+      "items": [
+        {
+          "month": "7",
+          "client": "(주) 이런회사",
+          "description": "(주) 이런회사 퇴사"
+        }
+      ]
+    },
+    {
+      "year": "2019",
+      "items": [
+        {
+          "month": "12",
+          "client": "(주) 이런회사",
+          "description": "(주) 이런회사 입사"
+        }
+      ]
+    },
+    {
       "year": "2018",
       "items": [
         {

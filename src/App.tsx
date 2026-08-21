@@ -63,6 +63,7 @@ export const App: React.FC = () => {
             profile={profile}
             about={about}
             projects={projects}
+            theme={theme}
             onNavigate={setActiveTab}
             onSelectProject={setSelectedProject}
           />

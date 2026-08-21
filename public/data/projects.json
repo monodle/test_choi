@@ -1,23 +1,6 @@
 [
   {
     "id": "project-1",
-    "seq": "6192341",
-    "order": 1,
-    "title": "아무거나 제목",
-    "caption": "아무거나 내용이지롱",
-    "category": "아무거나",
-    "image": "",
-    "customImage": "",
-    "date": "Jul 20,2026",
-    "alt": "",
-    "customDetailImages": [],
-    "detailImages": [
-      "",
-      ""
-    ]
-  },
-  {
-    "id": "project-1",
     "seq": "6192340",
     "order": 1,
     "title": "사전 예약 이벤트",

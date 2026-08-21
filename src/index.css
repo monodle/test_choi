@@ -161,6 +161,92 @@ body {
   }
 }
 
+/* ==========================================================================
+   Genuine 3D Page Flip Transitions (Pure Y-Axis Flip)
+   ========================================================================== */
+.page-flip-scene {
+  perspective: 2200px;
+  perspective-origin: center top;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.page-flip-card {
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: center top;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Flip Out (0deg -> 90deg) */
+.page-flip-card.flip-out-right {
+  animation: flipOutRight 0.24s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.page-flip-card.flip-out-left {
+  animation: flipOutLeft 0.24s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+/* Flip In (90deg -> 0deg) */
+.page-flip-card.flip-in-right {
+  animation: flipInRight 0.26s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+.page-flip-card.flip-in-left {
+  animation: flipInLeft 0.26s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+@keyframes flipOutRight {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-90deg);
+  }
+}
+
+@keyframes flipOutLeft {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes flipInRight {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes flipInLeft {
+  0% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-flip-card.flip-out-right,
+  .page-flip-card.flip-out-left,
+  .page-flip-card.flip-in-right,
+  .page-flip-card.flip-in-left {
+    animation: none;
+    transform: none;
+  }
+}
+
 /* Header Styles */
 .site-header {
   position: fixed;
@@ -2343,16 +2429,25 @@ body {
 /* Dynamic Hero Visual Backdrop (Strictly bounded from top of page down to marquee-section) */
 .hero-visual-backdrop {
   position: absolute;
-  top: -60px;
+  top: -100px;
   left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   width: 100vw;
-  height: calc(100% + 60px);
+  height: calc(100% + 100px);
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
   mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+}
+
+@media (min-width: 768px) {
+  .hero-visual-backdrop {
+    top: -140px;
+    height: calc(100% + 140px);
+  }
 }
 
 .hero-grid-mesh {
@@ -2906,7 +3001,7 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: var(--card-media-bg);
+  background: #121217;
   overflow: hidden;
 }
 
@@ -2920,6 +3015,41 @@ body {
 
 .cinematic-spotlight-card:hover .spotlight-media-container img {
   transform: scale(1.05);
+}
+
+/* Spotlight Card Image Pending Placeholder */
+.spotlight-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: radial-gradient(circle at 50% 40%, #1a1a22 0%, #101015 100%);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.spotlight-placeholder-icon {
+  opacity: 0.45;
+  color: #a1a1aa;
+}
+
+.spotlight-placeholder-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #e4e4e7;
+  max-width: 85%;
+  line-height: 1.4;
+}
+
+.spotlight-placeholder-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #71717a;
+  font-weight: 500;
 }
 
 .spotlight-media-gradient {

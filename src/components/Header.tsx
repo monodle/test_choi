@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
   const handleNavClick = (tab: TabType) => {
     onTabChange(tab);
     setMobileMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   const navItems: TabType[] = ['HOME', 'PROJECTS', 'ABOUT', 'CONTACT'];

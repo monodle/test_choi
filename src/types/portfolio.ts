@@ -8,6 +8,7 @@ export interface ProjectItem {
   date: string;                  // 제작일
   alt: string;                   // 이미지 대체 텍스트
   link?: string;                 // 웹사이트 바로가기 링크 (새 창 연결)
+  main?: boolean;                // 홈화면 메인 스포트라이트 대표작 지정 여부
 }
 
 export interface DesignPillar {

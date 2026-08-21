@@ -1,15 +1,13 @@
 export interface ProjectItem {
-  id?: string;
-  seq?: string;
-  order?: number;
-  title: string;
-  caption: string;
-  category: string;
-  image: string;
-  detailImages?: string[];        // 프로젝트 상세 이미지 URL/경로 목록
-  date: string;
-  alt: string;
-  link?: string;                 // 프로젝트 관련 링크 (웹사이트, 라이브 데모 등)
+  id?: string;                   // 렌더링 키 및 모달 식별용 ID (자동 생성)
+  title: string;                 // 프로젝트 타이틀
+  caption: string;               // 요약 캡션 / 설명문
+  category: string;              // 카테고리
+  image: string;                 // 목록 썸네일 이미지 URL/경로
+  detailImages?: string[];       // 상세 뷰 이미지 URL/경로 목록
+  date: string;                  // 제작일
+  alt: string;                   // 이미지 대체 텍스트
+  link?: string;                 // 웹사이트 바로가기 링크 (새 창 연결)
 }
 
 export interface DesignPillar {

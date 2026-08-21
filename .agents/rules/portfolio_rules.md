@@ -33,8 +33,6 @@
 ```typescript
 export interface ProjectItem {
   id?: string;                   // 고유 ID (선택사항, 미지정 시 JSON 인덱스 기반 자동 생성)
-  seq?: string;                  // 원본 시퀀스 번호 (선택사항)
-  order?: number;                // 정렬 순서 (선택사항)
   title: string;                 // 프로젝트 타이틀
   caption: string;               // 요약 캡션 / 설명문
   category: string;              // 카테고리 (All, UI/UX 등)

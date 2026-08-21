@@ -49,7 +49,6 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   const navItems: TabType[] = ['HOME', 'PROJECTS', 'ABOUT', 'CONTACT'];
-  const navNumbers = ['01', '02', '03', '04'];
 
   return (
     <>
@@ -152,7 +151,6 @@ export const Header: React.FC<HeaderProps> = ({
                     className={`mobile-fullscreen-link ${isActive ? 'active' : ''}`}
                     style={{ animationDelay: `${(idx + 1) * 0.08}s` }}
                   >
-                    <span className="mobile-link-num">{navNumbers[idx]}</span>
                     <span className="mobile-link-text">{tab}</span>
                     {isActive && <span className="mobile-active-dot" />}
                   </button>

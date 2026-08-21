@@ -2162,6 +2162,102 @@ body {
   background: radial-gradient(circle, rgba(79, 70, 229, 0.09) 0%, rgba(99, 102, 241, 0.04) 60%, transparent 80%);
 }
 
+/* ==========================================================================
+   SHOOTING STARS & NIGHT SKY ANIMATION (Dark Mode Only)
+   ========================================================================== */
+.shooting-stars-wrapper {
+  display: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+[data-theme="dark"] .shooting-stars-wrapper {
+  display: block;
+}
+
+/* Meteors / Shooting Stars */
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(229, 184, 105, 0.4) 40%, rgba(255, 255, 255, 0.95) 100%);
+  border-radius: 9999px;
+  filter: drop-shadow(0 0 6px rgba(229, 184, 105, 0.8));
+  opacity: 0;
+  transform-origin: left top;
+  transform: rotate(var(--angle, 40deg)) translateX(-80px);
+  animation: meteorFall var(--duration, 2.6s) cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+.shooting-star::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 
+    0 0 6px 1px #ffffff,
+    0 0 12px 3px rgba(229, 184, 105, 0.9),
+    0 0 20px 6px rgba(229, 184, 105, 0.5);
+}
+
+@keyframes meteorFall {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--angle, 40deg)) translateX(-100px) scale(0.3);
+  }
+  15% {
+    opacity: 1;
+    transform: rotate(var(--angle, 40deg)) translateX(20px) scale(1);
+  }
+  70% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--angle, 40deg)) translateX(480px) scale(0.2);
+  }
+}
+
+/* Ambient Twinkling Stars */
+.twinkle-star {
+  position: absolute;
+  width: var(--size, 2px);
+  height: var(--size, 2px);
+  background: var(--color, #ffffff);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--color, rgba(255, 255, 255, 0.8));
+  opacity: 0.2;
+  animation: starTwinklePulse var(--duration, 3.5s) ease-in-out infinite alternate;
+  animation-delay: var(--delay, 0s);
+  will-change: opacity, transform;
+}
+
+@keyframes starTwinklePulse {
+  0% {
+    opacity: 0.15;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.35);
+    box-shadow: 0 0 10px 2px var(--color, rgba(229, 184, 105, 0.8));
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+}
+
+
 /* Designer Hero Layout */
 .designer-hero-grid {
   display: flex;

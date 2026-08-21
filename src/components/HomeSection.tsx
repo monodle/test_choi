@@ -10,6 +10,7 @@ import {
 import { ProfileInfo, AboutInfo, ProjectItem } from '../types/portfolio';
 import { TabType } from './Header';
 import { ProjectCard } from './ProjectCard';
+import { ShootingStars } from './ShootingStars';
 
 interface HomeSectionProps {
   profile: ProfileInfo;
@@ -106,6 +107,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
           <div className="hero-aurora-blob hero-aurora-1" />
           <div className="hero-aurora-blob hero-aurora-2" />
           <div className="hero-grid-mesh" />
+          <ShootingStars />
         </div>
 
         <div className="designer-hero-grid">

@@ -112,10 +112,10 @@ npm run preview
 모든 포트폴리오 콘텐츠는 `public/data/portfolio.json` 파일에서 직접 수정할 수 있습니다.
 
 1. **프로젝트 내용 추가 및 수정**:
-   - `portfolio.json`의 `projects` 배열에서 `title`, `caption`, `category`, `date` 등을 수정합니다.
-2. **프로젝트 로컬 이미지 교체**:
-   - 썸네일 교체: `public/images/projects/`에 이미지를 넣고 `customImage: "images/projects/sample.jpg"`로 지정
-   - 상세 이미지 교체: `customDetailImages: ["images/projects/detail-1.jpg", "images/projects/detail-2.jpg"]`로 지정
+   - `public/data/projects.json`에서 `title`, `caption`, `category`, `date`, `image`, `detailImages` 등을 수정합니다.
+2. **프로젝트 이미지 경로 지정**:
+   - 썸네일: `image: "images/projects/sample.jpg"` 또는 URL 직접 지정
+   - 상세 이미지: `detailImages: ["images/projects/detail-1.jpg", "images/projects/detail-2.jpg"]`로 지정
 3. **About 프로필 및 소개 정보 수정**:
-   - 프로필 이미지: `public/images/about/` 폴더에 이미지를 추가하고 `about.image` 경로 수정
+   - 프로필 이미지: `public/images/about/` 폴더에 이미지를 추가하고 `about.json`의 `image` 경로 수정
    - 소개글, 사용 툴, 보유 스킬, 파트너사 목록, 연도별 경력 타임라인 항목 수정

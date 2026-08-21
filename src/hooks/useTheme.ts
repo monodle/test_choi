@@ -4,17 +4,12 @@ export type Theme = 'light' | 'dark';
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Default to 'light' as requested
-    const saved = localStorage.getItem('portfolio-theme');
-    if (saved === 'light' || saved === 'dark') {
-      return saved;
-    }
-    return 'light';
+    // 접속 시 50% 확률로 라이트/다크 테마 랜덤 적용
+    return Math.random() < 0.5 ? 'light' : 'dark';
   });
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('portfolio-theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

@@ -1,1843 +1,1383 @@
 [
   {
-    "id": "project-1",
-    "seq": "6192340",
-    "order": 1,
     "title": "사전 예약 이벤트",
-    "caption": "2025년 이티밴 엑스 사전 예약 이벤트",
+    "caption": "2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트2025년 이티밴 엑스 사전 예약 이벤트",
     "category": "이티밴",
     "image": "images/project/l_6192340.jpg",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "c009_event_EX사전예약_thum.jpg",
-    "customDetailImages": [],
     "detailImages": [
       "images/project/v_6192340_1.jpg",
       "images/project/v_6192340_2.jpg"
-    ]
+    ],
+    "link": "https://jeismobility.com/cscenter/event.asp?mode=view&idx=2857&page=1&pageSize=6&seritemidx=&serboardsort=2&search=0&searchStr="
   },
   {
-    "id": "project-2",
-    "seq": "6192339",
-    "order": 2,
     "title": "무상 서비스 캠페인",
     "caption": "설연휴 귀성, 귀경길 안심 정비 서비스 안내 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-3",
-    "seq": "6192330",
-    "order": 3,
     "title": "홍성 브레이크 이벤트",
     "caption": "홍성 브레이크 패드 콜라보 이벤트 기획 & 제작",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-4",
-    "seq": "6192319",
-    "order": 4,
     "title": "스마트스토어 상세 페이지",
     "caption": "이티밴 라이프 스마트스토어 상세 페이지",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-5",
-    "seq": "6192317",
-    "order": 5,
     "title": "캠퍼밴 온/오프라인 브로슈어",
     "caption": "캠퍼밴 출시 온/오프라인 홍보 브로슈어 제작",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-6",
-    "seq": "6192316",
-    "order": 6,
     "title": "전기 바이크 CTIS 모빌리티 CI/BI",
     "caption": "신규 전기 바이크 브랜드 CTIS 모빌리티 CI/BI 시안 제작",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-7",
-    "seq": "6192315",
-    "order": 7,
     "title": "이티밴 친구 추천 이벤트",
     "caption": "이티밴 프로 / 미니 친구 추천 이벤트 친구도 나도 혜택 증정!",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-8",
-    "seq": "6192314",
-    "order": 8,
     "title": "이티밴 라이프 출시",
     "caption": "이티밴 라이프 홈페이지 메뉴 상세 페이지",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-9",
-    "seq": "6192310",
-    "order": 9,
     "title": "이티밴 여름 시승 이벤트",
     "caption": "이티밴과 함께 떠나는 시승 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Jul 8,2026",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-10",
-    "seq": "1472493",
-    "order": 10,
     "title": "넷마블",
     "caption": "글로벌 대표 게임 브랜드 넷마블의 디자인 외주 연간 운영 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Mar 6,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-11",
-    "seq": "1447160",
-    "order": 11,
     "title": "SK 이노베이션",
     "caption": "SK이노베이션과 함께하는 Re : Earth 프로젝트 \"맹그로브 나무심기로 지구의 에너지를 돌려주세요!\" 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-12",
-    "seq": "1447161",
-    "order": 12,
     "title": "잇츠스킨",
     "caption": "나답게, 내 피부답게 It's my skin 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-13",
-    "seq": "1483973",
-    "order": 13,
     "title": "디트라이브 전사 워크샵",
     "caption": "사내 전사 워크샵 2018 \"디트시그널\"",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Mar 12,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-14",
-    "seq": "1447162",
-    "order": 14,
     "title": "롯데칠성음료",
     "caption": "레몬1000 C+ 투명한 사진관 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-15",
-    "seq": "1447153",
-    "order": 15,
     "title": "디트라이브",
     "caption": "브랜드를 키우는 에이전시 디트라이브 자사 홈페이지",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-16",
-    "seq": "1447154",
-    "order": 16,
     "title": "클리오",
     "caption": "무수히 많은 피부 자극으로 활활 타오르는 내 얼굴 피부를 빠르게 잠재우는 119패드 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-17",
-    "seq": "1447155",
-    "order": 17,
     "title": "클리오",
     "caption": "더마토리 Dermatory  내 얼굴에 불날때 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-18",
-    "seq": "1447156",
-    "order": 18,
     "title": "현대자동차",
     "caption": "HyBUY More People, Bigger Offer! 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-19",
-    "seq": "1447150",
-    "order": 19,
     "title": "삼성전자",
     "caption": "삼성 디지털 프라자 컬쳐 이벤트 ep.4 뮤지컬 타이타닉",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-20",
-    "seq": "1447151",
-    "order": 20,
     "title": "현대자동차",
     "caption": "현대 자동차 글로벌 경매 프로젝트 HyBUY 프로모션 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-21",
-    "seq": "1447146",
-    "order": 21,
     "title": "빗썸",
     "caption": "전 세계 1등 가상화폐 거래소 빗썸 연간운영 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-22",
-    "seq": "1447147",
-    "order": 22,
     "title": "쉐보레",
     "caption": "사랑하는 사람을 위해 달린다 ALL NEW MALIBU 런칭 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-23",
-    "seq": "1447148",
-    "order": 23,
     "title": "에이스침대",
     "caption": "DO NOT DISTURB 에이스라면, 방해 받지 마세요! 우리 둘만의 에이스 침대 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-24",
-    "seq": "1447149",
-    "order": 24,
     "title": "현대자동차",
     "caption": "현대자동차 2017 Global Tourist Attraction Campaign 사이트 유지보수와 결과 e-book 제작",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-25",
-    "seq": "1447142",
-    "order": 25,
     "title": "T 로밍",
     "caption": "T로밍 한, 중, 일 Pass 출시 기념 Special Gift EVENT 세상에 없던 국민 요금제 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-26",
-    "seq": "1447143",
-    "order": 26,
     "title": "삼성전자",
     "caption": "라이프스타일 오디오 브랜드 HARMAN 삼성 디지털프라자에서 만나보세요! 혜택안내",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-27",
-    "seq": "1447144",
-    "order": 27,
     "title": "대신증권",
     "caption": "대신증권 로보라이더와 펀드매니저의 자비없는 수익률 한 판 승부! 프로모션 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-28",
-    "seq": "1447145",
-    "order": 28,
     "title": "한국관광공사",
     "caption": "당신은 어떤 한국을 여행하고 싶은신가요? 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-29",
-    "seq": "1447137",
-    "order": 29,
     "title": "삼성전자",
     "caption": "똑! 똑! 꿈을 만나는 교실 만들기 삼성 스마트스쿨 2017 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-30",
-    "seq": "1447138",
-    "order": 30,
     "title": "삼성 모바일 스토어",
     "caption": "갤럭시 S8 런칭 기념 S8의 무한한 기능! 퀴즈  SNS 컨텐츠",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-31",
-    "seq": "1447139",
-    "order": 31,
     "title": "매일유업 앱솔루트",
     "caption": "우리 아기 두뇌발달에 좋은 앱솔루트 명작 동화 시리즈 이벤트 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-32",
-    "seq": "1447140",
-    "order": 32,
     "title": "한국관광공사",
     "caption": "12개의 취향, 12개의 한국, 12개의 여행, 당신은 어떤 한국을 여행하고 싶으신가요? Different You. Different Korea. 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 20,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-33",
-    "seq": "1444384",
-    "order": 33,
     "title": "SK 텔레콤",
     "caption": "치킨 검색만 해도 매일 칰킨 1,000마리!를 쏘는 T전화 아이폰 오픈 기념 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-34",
-    "seq": "1444385",
-    "order": 34,
     "title": "삼성전자",
     "caption": "한 해 동안 삼성 세탁기를 사랑해 주신 분들을 위한 2016 삼성 세탁기 워시 대전 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-35",
-    "seq": "1444386",
-    "order": 35,
     "title": "최인아 책방",
     "caption": "나만의 작은 서제 최인아 책방 운영 디자인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-36",
-    "seq": "1444369",
-    "order": 36,
     "title": "삼성전자",
     "caption": "디지털 교육 격차 해소, 꿈꾸는 교실 만들기 프로젝트 삼성 스마트스쿨 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-37",
-    "seq": "1444370",
-    "order": 37,
     "title": "SK 텔레콤",
     "caption": "신개념 가족 소통 App CAKE 출시 기념 이벤트 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-38",
-    "seq": "1444371",
-    "order": 38,
     "title": "SK 텔레콤",
     "caption": "T전화 해피해피 페스티벌, T전화 가정의 달 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-39",
-    "seq": "1444372",
-    "order": 39,
     "title": "SK 텔레콤",
     "caption": "조진웅과 함께하는 T 전화 안심기능 설명 SNS 컨텐츠",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-40",
-    "seq": "1444355",
-    "order": 40,
     "title": "삼성전자 blog",
     "caption": "'태양의 후예'  패러디 4컷 만화 일러스트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-41",
-    "seq": "1444356",
-    "order": 41,
     "title": "삼성 모바일 스토어",
     "caption": "갖고 싶다! 너란 티켓 보고 싶다! \"뮤지컬 로기수\" 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-42",
-    "seq": "1444357",
-    "order": 42,
     "title": "SK 텔레콤",
     "caption": "T전화와 함께하는 7일간의 데이트 프로모션 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-43",
-    "seq": "1444358",
-    "order": 43,
     "title": "T 페이",
     "caption": "할인과 결제를 한 번에! 티내고 싶을 땐 T내세요! 런칭 프로모션 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-44",
-    "seq": "1444134",
-    "order": 44,
     "title": "adidas",
     "caption": "새해를 맞아 운동을 결심하셨나요? 아디다스 우먼스와 함께 당신의 의지를 담는 결심 프로필. 2016 너의 결심을 보여줘 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-45",
-    "seq": "1444135",
-    "order": 45,
     "title": "삼성전자",
     "caption": "'액션스타 이성용' 삼성 모바일 스토어 컬쳐 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-46",
-    "seq": "1444130",
-    "order": 46,
     "title": "SK 텔레콤",
     "caption": "T전화의 크리스마스 설현 달력 선물 증정, T전화 for Android 출시 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-47",
-    "seq": "1444131",
-    "order": 47,
     "title": "Eucerin",
     "caption": "링클케어 독일 1위, 안티에이징 전문가 유세린과 함께 피부시간을 되돌려보세요! 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-48",
-    "seq": "1444132",
-    "order": 48,
     "title": "SK 텔레콤",
     "caption": "매주 놀라운 선물이 쏟아지는 T전화 일주일만 만져봐 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-49",
-    "seq": "1444133",
-    "order": 49,
     "title": "SK 텔레콤",
     "caption": "지구를 지키는 노답 레인저스 T전화 영상 공유 대작전! 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-50",
-    "seq": "1444126",
-    "order": 50,
     "title": "T 로밍",
     "caption": "편의점 판매 런칭기념 버라이어티 이벤트 무(안)한도전 T로밍카드를 가져라! 프로모션 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-51",
-    "seq": "1444127",
-    "order": 51,
     "title": "SK 텔레콤",
     "caption": "T전화 1600 PANDAS+ PROJECT 테마적용으로 WWF에 기부하는 참 착한 프로젝트! 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-52",
-    "seq": "1444128",
-    "order": 52,
     "title": "SK telecom",
     "caption": "매번 적기 귀찮은 가계부, 알아서 입력해 드려요 클라스가 다른, 쓸수록 돈 버는 가계부 어플 런칭 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-53",
-    "seq": "1444129",
-    "order": 53,
     "title": "대신증권 크레온",
     "caption": "퀴즈만 풀어도 투자의 흐름이 보인다! 삼시세퀴 주식투자 편 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-54",
-    "seq": "1444122",
-    "order": 54,
     "title": "SK telecom",
     "caption": "새롭게 선보이는 T전화의 기능을 가장 먼저 만날 수 있는 기회! \"새로운 T전화를 체험하자!\" 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-55",
-    "seq": "1444123",
-    "order": 55,
     "title": "iporter",
     "caption": "해외직구 어렵다고, 누가 얘기했나? 쉽게 배우는 해외직구 퀴즈 풀고, 선물받고! 이벤트 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-56",
-    "seq": "1444124",
-    "order": 56,
     "title": "Maxim",
     "caption": "화이트데이에는 화이트골드로 \"커피향 가득한 사랑을 전하세요!\" 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-57",
-    "seq": "1444125",
-    "order": 57,
     "title": "MILLET",
     "caption": "도시에서도, 아웃도어에서도 Stylish Anywear MILLET TV-CF 런칭 이벤트 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 19,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-58",
-    "seq": "1442626",
-    "order": 58,
     "title": "SK telecom",
     "caption": "SKT 고객만의 특별한 혜택 Welcome Package 리플렛",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-59",
-    "seq": "1442627",
-    "order": 59,
     "title": "삼성 지펠아삭",
     "caption": "지펠아삭 당신에게 어울리는 김치를 묻다",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-60",
-    "seq": "1442628",
-    "order": 60,
     "title": "FILA OUTDOOR",
     "caption": "이중적인, 그래서 완벽한 김수현의 FILA 테라다운 야누스 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-61",
-    "seq": "1442629",
-    "order": 61,
     "title": "맥심",
     "caption": "커피라는 행복, 시 묵학제 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-62",
-    "seq": "1442621",
-    "order": 62,
     "title": "대신증권 크레온",
     "caption": "이루어 Dream 프로젝트 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-63",
-    "seq": "1442622",
-    "order": 63,
     "title": "삼성전자 S'데이",
     "caption": "설민석 강사의 김치역사 특강 \"우리는 왜 땅속으로 들어갔는가\"",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-64",
-    "seq": "1442623",
-    "order": 64,
     "title": "삼성전자 S'골드러시",
     "caption": "상반기 고객 사랑 감사기념 2015년형 지펠아삭 신제품 사전예약 대축제",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-65",
-    "seq": "1442624",
-    "order": 65,
     "title": "삼성전자",
     "caption": "풀HD보다 4배 더 생생한 리얼 화질 삼성 UHD 모니터 UD970 '과연 누가 최고의 눈일까?'",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-66",
-    "seq": "1442613",
-    "order": 66,
     "title": "에버랜드",
     "caption": "캐리비안베이 여름 캠페인 '싸이의 뜬금 퀴즈!'",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-67",
-    "seq": "1442614",
-    "order": 67,
     "title": "KEB 외환은행 SNS",
     "caption": "외환은행이 있어 해외가 더 쉬워집니다.",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-68",
-    "seq": "1442615",
-    "order": 68,
     "title": "테딘 패밀리 워터파크",
     "caption": "테딘 광고 영상 함께보고 푸짐한 선물 받자!",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-69",
-    "seq": "1442616",
-    "order": 69,
     "title": "SK telecom",
     "caption": "쓰면 쓸수록 생활이 편해지는 잘! 생긴  SK텔레콤 SMART APP 리플렛",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-70",
-    "seq": "1442604",
-    "order": 70,
     "title": "서울모터쇼",
     "caption": "2015 Seoul Motor Show, Move the Dream 포스터 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-71",
-    "seq": "1442605",
-    "order": 71,
     "title": "KEB 외환은행",
     "caption": "엽전으로 환전하고, 한국 민속촌을 맛보시오! 엽전으로 통하라! 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-72",
-    "seq": "1442606",
-    "order": 72,
     "title": "삼성전자",
     "caption": "삼성 모바일 스토어 성년의 날 이벤트 sns 컨텐츠",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-73",
-    "seq": "1442607",
-    "order": 73,
     "title": "삼성지펠아삭",
     "caption": "지펠아삭의 가장 맛있는 별미 김치를 선택하고 SNS 친구들에게 공유하자! 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-74",
-    "seq": "1442596",
-    "order": 74,
     "title": "삼성전자",
     "caption": "삼성 올인원 PC 아티브 원 7 가로수길 리빙페어 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-75",
-    "seq": "1442597",
-    "order": 75,
     "title": "현대자동차",
     "caption": "불꽃같이 뜨거운 브라질 월드컵 현장취재의 주인공이 될 기회! 월드컵 리포터즈 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-76",
-    "seq": "1442598",
-    "order": 76,
     "title": "삼성카드 홀가분 프로젝트",
     "caption": "꼭 필요한 것에 집중하면 마음도 인생도 홀가분해 집니다. 삼성카드 홀가분 프로젝트 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-77",
-    "seq": "1442599",
-    "order": 77,
     "title": "MG 손해보험",
     "caption": "MG 손해보험과 함께, 오늘부터 행복하세요! MG 손해보험 blog 사이트 제작/운영 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-78",
-    "seq": "1442588",
-    "order": 78,
     "title": "에버랜드",
     "caption": "에버랜드 LOST VALLEY 홍보대사를 뽑아주세요 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-79",
-    "seq": "1442589",
-    "order": 79,
     "title": "삼성카드",
     "caption": "삼성카드가 당신의 인생을 홀가분하게 만들어 드립니다. 삼성카드 '홀가분' 한 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-80",
-    "seq": "1442590",
-    "order": 80,
     "title": "SK 텔레콤",
     "caption": "영혼의 한 타를 위한 리그 오브 레전드 종결앱 T LoL 앱 프로모션 사이트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-81",
-    "seq": "1442591",
-    "order": 81,
     "title": "오리온 와우껌",
     "caption": "오리온 와우 펀치와 함께하는 Wow CATCH 이벤트 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-82",
-    "seq": "1468697",
-    "order": 82,
     "title": "토마토 클래스",
     "caption": "토익 단기 달성비법 토단비의 랜딩 페이지",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Mar 4,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-83",
-    "seq": "1442252",
-    "order": 83,
     "title": "삼성전자 S데이",
     "caption": "웹툰 <설계>작가와 함께하는 소셜 추리 웹툰 THE TARGET 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-84",
-    "seq": "1442253",
-    "order": 84,
     "title": "스탠다드차타드은행",
     "caption": "스탠다드차타드은행 착한 도서관 프로젝트 #3 캠페인 사이트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-85",
-    "seq": "1468247",
-    "order": 85,
     "title": "스탠다드차타드은행",
     "caption": "스탠다드차타드은행 착한 도서관 프로젝트 #3 캠페인 사이트 시안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Mar 4,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-86",
-    "seq": "1442249",
-    "order": 86,
     "title": "LOreal Paris 이드라후레쉬",
     "caption": "촉촉하고 싱그러운 이슬 광채 수분 편 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-87",
-    "seq": "1442250",
-    "order": 87,
     "title": "삼성지펠아삭",
     "caption": "삼성지펠아삭 M9000 567L, 327L 제품 프로모션 사이트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-88",
-    "seq": "1442248",
-    "order": 88,
     "title": "KB 국민카드",
     "caption": "전통시장을 국민의 힘으로 살리는 국민참여 프로젝트 '그시장 가봤니' 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 18,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-89",
-    "seq": "1440913",
-    "order": 89,
     "title": "Samsung ATIV",
     "caption": "삼성 ATIV 컴퓨터 런칭 프로모션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-90",
-    "seq": "1440914",
-    "order": 90,
     "title": "테딘 패밀리 워터파크",
     "caption": "테딘과 우리 아이가 함께 만드는 나만의 동화책 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-91",
-    "seq": "1440915",
-    "order": 91,
     "title": "SC 스탠다드 캐피탈",
     "caption": "아이스탠다드론 i와 아이스탠다드론 Q의 랜딩 페이지 제작",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-92",
-    "seq": "1440916",
-    "order": 92,
     "title": "코웨이",
     "caption": "코웨이 물 성장 프로젝트 종합 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-93",
-    "seq": "1440917",
-    "order": 93,
     "title": "SK 엔크린",
     "caption": "SK주유소 사랑의 도서 나눔 프로그램 함께 키우는 책나무",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-94",
-    "seq": "1440918",
-    "order": 94,
     "title": "KB 국민카드",
     "caption": "대한민국 최대의 두뇌 서바이벌에 도전하라! 꿈꾸는 광고인 2",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-95",
-    "seq": "1440909",
-    "order": 95,
     "title": "SC캐피탈",
     "caption": "돈문제 쉽게 풀자 이벤트 한도부터 풀면 돈문제가 술술~",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-96",
-    "seq": "1440910",
-    "order": 96,
     "title": "LOreal Paris 샤인카레스",
     "caption": "샤인 카레스 글로스 틴트로 특별한 발렌타인 데이를 만들어 보세요",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-97",
-    "seq": "1440911",
-    "order": 97,
     "title": "플로리다네츄럴",
     "caption": "플로리다 농부의 '진심'을 만나다! go to Florida 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-98",
-    "seq": "1440912",
-    "order": 98,
     "title": "웅진코웨이",
     "caption": "2013 새해맞이 안심가습 캠페인 ver.설날",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 17,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-99",
-    "seq": "1438601",
-    "order": 99,
     "title": "대신증권 크레온",
     "caption": "크레온 모바일 타사대체 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 16,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-100",
-    "seq": "1438602",
-    "order": 100,
     "title": "웅진코웨이",
     "caption": "케어스와 함께하는 우리아이를 위한 안심가습 캠페인",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 16,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-101",
-    "seq": "1438603",
-    "order": 101,
     "title": "ACUVUE",
     "caption": "Yes, eye can! 프로모션 사이트 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 16,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-102",
-    "seq": "1464579",
-    "order": 102,
     "title": "대신증권 크레온",
     "caption": "크레온 모바일 오픈기념 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Mar 2,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-103",
-    "seq": "1438600",
-    "order": 103,
     "title": "디트라이브",
     "caption": "잡지 광고 일러스트 제작",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 16,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-104",
-    "seq": "1437196",
-    "order": 104,
     "title": "오리온 오!감자",
     "caption": "오!감자 CF 투표 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-105",
-    "seq": "1437197",
-    "order": 105,
     "title": "ANYMODE",
     "caption": "갤럭시S3 LTE 스와로브스키 커버 콜렉션",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-106",
-    "seq": "1437198",
-    "order": 106,
     "title": "TMON 티몬",
     "caption": "맞춤형 기획전 운영 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-107",
-    "seq": "1437199",
-    "order": 107,
     "title": "삼성지펠아삭",
     "caption": "삼성지펠아삭 승기네 김치요리집 캠페인 제안",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-108",
-    "seq": "1436242",
-    "order": 108,
     "title": "코웨이",
     "caption": "2PM과 나만의 화보 만들기 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-109",
-    "seq": "1436219",
-    "order": 109,
     "title": "삼성전자 GALAXY S3",
     "caption": "삼성전자 갤럭시 S3 출시기념 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-110",
-    "seq": "1436213",
-    "order": 110,
     "title": "매일유업 상하목장",
     "caption": "정직한 먹거리를 위해 있는 그대로의 자연을 담아내는 상하목장",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-111",
-    "seq": "1436218",
-    "order": 111,
     "title": "오리온 촉촉한 초코칩",
     "caption": "파페포포와 함께하는 촉촉한 초코칩 인증샷 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-112",
-    "seq": "1436211",
-    "order": 112,
     "title": "삼성 스마트 에어컨 Q",
     "caption": "한Q에 시원한 연아의 하루 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-113",
-    "seq": "1436214",
-    "order": 113,
     "title": "대신증권 크레온",
     "caption": "크레온 대국민 1억 투자 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 14,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-114",
-    "seq": "1435022",
-    "order": 114,
     "title": "삼성 스마트에어컨Q",
     "caption": "한Q에 시원한 삼성 스마트에어컨 Q 퀴즈 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 13,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   },
   {
-    "id": "project-115",
-    "seq": "1454674",
-    "order": 115,
     "title": "SC 캐피탈",
     "caption": "아이스탠다드론의 아이 참 쉬운 이벤트",
     "category": "",
     "image": "",
-    "customImage": "",
     "date": "Feb 25,2020",
     "alt": "",
-    "customDetailImages": [],
     "detailImages": [
       ""
-    ]
+    ],
+    "link": ""
   }
 ]

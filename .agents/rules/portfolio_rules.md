@@ -29,21 +29,20 @@
 - **단일 원본 파일**: `public/data/portfolio.json`
 - 모든 프로젝트, 프로필, 어바웃, 연락처 정보는 이 파일 하나에서만 수정하고 관리합니다.
 
-### 데이터 스키마 표준
+### 데이터 스키마 표준 (순서는 JSON 파일의 배열 순서 기준)
 ```typescript
 export interface ProjectItem {
-  id: string;                    // 고유 ID (예: "project-1")
-  seq: string;                   // 원본 시퀀스 번호 (예: "6192340")
-  order: number;                 // 정렬 순서 (1, 2, ...)
+  id?: string;                   // 고유 ID (선택사항, 미지정 시 JSON 인덱스 기반 자동 생성)
+  seq?: string;                  // 원본 시퀀스 번호 (선택사항)
+  order?: number;                // 정렬 순서 (선택사항)
   title: string;                 // 프로젝트 타이틀
   caption: string;               // 요약 캡션 / 설명문
   category: string;              // 카테고리 (All, UI/UX 등)
-  image: string;                 // 목록 썸네일 원본 URL
-  customImage: string;           // 사용자 직접 지정 썸네일 로컬 경로 (우선순위 1)
-  detailImages?: string[];       // 상세 뷰 고해상도 이미지 원본 URL 목록
-  customDetailImages?: string[]; // 사용자 직접 지정 상세 이미지 로컬 경로 목록 (우선순위 1)
+  image: string;                 // 목록 썸네일 이미지 URL/경로
+  detailImages?: string[];       // 상세 뷰 고해상도 이미지 URL/경로 목록
   date: string;                  // 제작일 (예: "Jul 8, 2026")
   alt: string;                   // 이미지 대체 텍스트
+  link?: string;                 // 프로젝트 관련 링크 (웹사이트, 라이브 데모 등)
 }
 
 export interface AboutInfo {
@@ -89,9 +88,8 @@ export interface PortfolioData {
 
 ## 4. 테마 및 UI/UX 규칙
 - **테마 시스템**:
-  - 기본(Default) 테마: **라이트 테마 (Light Mode)**
-  - 다크 테마(Dark Mode) 지원 및 헤더 우측 토글 버튼 제공
-  - `localStorage`를 통해 사용자의 테마 선호도 영구 유지
+  - 기본 시작 테마: **접속 시 라이트/다크 모드 50% 확률 랜덤 시작**
+  - 헤더 우측 토글 버튼을 통해 수동 전환 지원
 - **상세 뷰어 (PROJECT/view/...)**:
   - 프로젝트 클릭 시 상단 컨트롤 바(이전/다음, 카운터, 닫기)와 함께 전체 고해상도 상세 이미지들이 세로로 스크롤되며 렌더링
   - `ESC` 키 및 `ArrowLeft` / `ArrowRight` 키보드 내비게이션 기본 지원

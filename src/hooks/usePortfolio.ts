@@ -61,7 +61,11 @@ export function usePortfolio(): UsePortfolioResult {
         const profile: ProfileInfo = await profileRes.json();
         const about: AboutInfo = await aboutRes.json();
         const contact: ContactInfo = await contactRes.json();
-        const projects: ProjectItem[] = await projectsRes.json();
+        const rawProjects: ProjectItem[] = await projectsRes.json();
+        const projects: ProjectItem[] = rawProjects.map((p, index) => ({
+          ...p,
+          id: p.id || `project-${index + 1}`,
+        }));
 
         if (!isMounted) return;
 

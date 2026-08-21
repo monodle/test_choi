@@ -11,7 +11,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) =>
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const imageSrc = project.customImage?.trim() || project.image?.trim();
+  const imageSrc = project.image?.trim();
 
   return (
     <article

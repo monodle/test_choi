@@ -234,11 +234,11 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
           >
             <div className="spotlight-media-container">
               <img
-                src={heroFeaturedProject.customImage || heroFeaturedProject.image}
+                src={heroFeaturedProject.image}
                 alt={heroFeaturedProject.title}
                 loading="lazy"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = heroFeaturedProject.image;
+                  (e.target as HTMLImageElement).style.display = 'none';
                 }}
               />
               <div className="spotlight-media-gradient" />

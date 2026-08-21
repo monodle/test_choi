@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ProjectItem } from '../types/portfolio';
-import { X, ChevronLeft, ChevronRight, LayoutGrid, Calendar, Layers, ImageOff } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, LayoutGrid, Calendar, Layers, ImageOff, ExternalLink, Globe } from 'lucide-react';
 
 interface ProjectModalProps {
   project: ProjectItem;
@@ -18,9 +18,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   const overlayRef = useRef<HTMLDivElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const currentIndex = projects.findIndex((p) => p.id === project.id);
+  const currentIndex = projects.findIndex((p) => (project.id ? p.id === project.id : p === project));
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  const nextProject = currentIndex >= 0 && currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   // 1. Lock background body scroll while modal is open
   useEffect(() => {
@@ -70,13 +70,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   }, [project.id]);
 
   // Determine list of detail images
-  const customList = (project.customDetailImages || []).filter((url) => typeof url === 'string' && url.trim() !== '');
-  const fetchedList = (project.detailImages || []).filter((url) => typeof url === 'string' && url.trim() !== '');
-  const fallbackSingle = project.customImage?.trim() || project.image?.trim();
+  const detailList = (project.detailImages || []).filter((url) => typeof url === 'string' && url.trim() !== '');
+  const fallbackSingle = project.image?.trim();
 
-  const displayImages = customList.length > 0
-    ? customList
-    : (fetchedList.length > 0 ? fetchedList : (fallbackSingle ? [fallbackSingle] : []));
+  const displayImages = detailList.length > 0
+    ? detailList
+    : (fallbackSingle ? [fallbackSingle] : []);
 
   const handleOverlayScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const scrollTop = e.currentTarget.scrollTop;
@@ -166,6 +165,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {project.caption && (
             <p className="detail-main-caption">{project.caption}</p>
+          )}
+
+          {project.link && project.link.trim() !== '' && (
+            <div className="detail-link-action-wrap">
+              <a
+                href={project.link.trim()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="detail-live-link-btn"
+                aria-label={`${project.title} 웹사이트 새 창으로 열기`}
+              >
+                <Globe size={15} className="link-globe-icon" />
+                <span>웹사이트 바로가기</span>
+                <ExternalLink size={14} className="link-arrow-icon" />
+              </a>
+            </div>
           )}
         </header>
 

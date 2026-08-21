@@ -349,6 +349,24 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
         </div>
       </section>
 
+      {/* 5. CLIENT COLLABORATIONS & TRUST STRIP */}
+      {about.clients && about.clients.length > 0 && (
+        <section className="home-clients-section">
+          <div className="clients-header">
+            <span className="clients-title-tag">Clients & Partnerships</span>
+            <h3 className="clients-subheading">20년간 함께 가치를 만들어온 파트너</h3>
+          </div>
+          <div className="clients-chips-wall">
+            {about.clients.map((client, idx) => (
+              <div key={idx} className="client-chip">
+                <span className="chip-dot" />
+                <span className="chip-name">{client}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* 4. DESIGN MANIFESTO & PHILOSOPHY (Editorial Layout) */}
       <section className="home-manifesto-section">
         <div className="manifesto-inner-grid">
@@ -390,25 +408,6 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
           </div>
         </div>
       </section>
-
-
-      {/* 5. CLIENT COLLABORATIONS & TRUST STRIP */}
-      {about.clients && about.clients.length > 0 && (
-        <section className="home-clients-section">
-          <div className="clients-header">
-            <span className="clients-title-tag">Clients & Partnerships</span>
-            <h3 className="clients-subheading">20년간 함께 가치를 만들어온 파트너</h3>
-          </div>
-          <div className="clients-chips-wall">
-            {about.clients.map((client, idx) => (
-              <div key={idx} className="client-chip">
-                <span className="chip-dot" />
-                <span className="chip-name">{client}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
     </div>
   );
 };

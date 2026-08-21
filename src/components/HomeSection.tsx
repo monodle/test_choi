@@ -52,6 +52,13 @@ const defaultDesignPillars = [
     desc: '기획 의도 분석부터 하이엔드 비주얼 아트워크, 웹 표준 코드 구현까지 20년간 축적된 실무 경험으로 타협 없는 완성도를 보장합니다.',
     icon: 'ShieldCheck',
   },
+  {
+    num: '04',
+    title: 'AI & Experience Synergy',
+    subtitle: '실무 경험과 AI의 유기적 결합',
+    desc: '수많은 실무 경험과 최신 AI 도구를 유기적으로 결합하여, 빠르고 정확하며 완성도 높은 디지털 결과물을 제작합니다.',
+    icon: 'Sparkles',
+  },
 ];
 
 const getPillarIcon = (iconName?: string) => {
@@ -63,6 +70,7 @@ const getPillarIcon = (iconName?: string) => {
     case 'shieldcheck':
     case 'shield':
       return ShieldCheck;
+    case 'sparkles':
     default:
       return Sparkles;
   }

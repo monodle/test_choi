@@ -1,0 +1,108 @@
+# Designer Portfolio Project Rules & Guidelines
+
+## 1. 프로젝트 개요 및 기술 스택
+- **목적**: 디자이너 포트폴리오 웹사이트 (GitHub Pages 호스팅)
+- **프레임워크**: React 19 (Vite 기반), TypeScript (타입 안전성 및 방어적 프로그래밍)
+- **스타일링**: CSS Variables 기반 커스텀 모던 CSS (라이트/다크 테마 완전 지원, 가변 그리드)
+- **배포 타겟**: GitHub Pages (상대 경로 `base: './'` 설정 및 GitHub Actions 자동 배포 워크플로우 적용)
+- **데이터 관리**: 단일 원본 정적 JSON 기반 (`public/data/portfolio.json`)
+
+---
+
+## 2. 코딩 & 아키텍처 원칙 (SOLID & Clean Code)
+1. **단일 책임 원칙 (SRP)**:
+   - UI 렌더링 컴포넌트와 데이터 로드/상태 로직 분리 (`usePortfolio`, `useTheme` 커스텀 훅 활용).
+   - 각 섹션(헤더, 프로젝트 그리드, 상세 뷰어, About, Contact, 푸터)을 독립 모듈 컴포넌트로 관리.
+2. **방어적 프로그래밍 (Defensive Programming)**:
+   - 모든 이미지 필드(`customImage`, `image`, `customDetailImages`, `detailImages`)에 대해 fallback 및 에러 핸들링(`onError` 대체 UI/숨김) 처리.
+   - 데이터 로드 실패 시에도 번들된 기본 상태를 유지하여 런타임 크래시 방지.
+3. **Early Return 패턴**:
+   - 조건부 렌더링 및 에러 처리 시 중첩 분기(if-else)를 지양하고 Early Return 적용.
+4. **네이밍 컨벤션**:
+   - 컴포넌트: PascalCase (`ProjectCard.tsx`, `ProjectModal.tsx`, `AboutSection.tsx`)
+   - 유틸/훅: camelCase (`usePortfolio.ts`, `useTheme.ts`)
+   - 인터페이스/타입: PascalCase (`ProjectItem`, `PortfolioData`, `AboutInfo`, `Theme`)
+
+---
+
+## 3. 포트폴리오 데이터 관리 규약 (Single Source of Truth)
+- **단일 원본 파일**: `public/data/portfolio.json`
+- 모든 프로젝트, 프로필, 어바웃, 연락처 정보는 이 파일 하나에서만 수정하고 관리합니다.
+
+### 데이터 스키마 표준
+```typescript
+export interface ProjectItem {
+  id: string;                    // 고유 ID (예: "project-1")
+  seq: string;                   // 원본 시퀀스 번호 (예: "6192340")
+  order: number;                 // 정렬 순서 (1, 2, ...)
+  title: string;                 // 프로젝트 타이틀
+  caption: string;               // 요약 캡션 / 설명문
+  category: string;              // 카테고리 (All, UI/UX 등)
+  image: string;                 // 목록 썸네일 원본 URL
+  customImage: string;           // 사용자 직접 지정 썸네일 로컬 경로 (우선순위 1)
+  detailImages?: string[];       // 상세 뷰 고해상도 이미지 원본 URL 목록
+  customDetailImages?: string[]; // 사용자 직접 지정 상세 이미지 로컬 경로 목록 (우선순위 1)
+  date: string;                  // 제작일 (예: "Jul 8, 2026")
+  alt: string;                   // 이미지 대체 텍스트
+}
+
+export interface AboutInfo {
+  image?: string;                // 어바웃 프로필 이미지 경로 (예: "images/about/filename.jpg")
+  intro: string;                 // 디자이너 소개 전문
+  tools: string[];               // 사용 툴 목록 (8종)
+  skills: string[];              // 보유 스킬 목록 (11종)
+  clients: string[];             // 파트너십 클라이언트 목록 (39종)
+  experience: {
+    year: string;
+    items: {
+      month: string;
+      client: string;
+      description: string;
+    }[];
+  }[];
+}
+
+export interface ContactInfo {
+  headline: string;
+  email: string;
+  address: string;
+  note: string;
+}
+
+export interface PortfolioData {
+  profile: {
+    name: string;
+    role: string;
+    bio: string;
+    email: string;
+    address: string;
+    tagline: string;
+  };
+  about: AboutInfo;
+  contact: ContactInfo;
+  totalProjects: number;
+  projects: ProjectItem[];
+}
+```
+
+---
+
+## 4. 테마 및 UI/UX 규칙
+- **테마 시스템**:
+  - 기본(Default) 테마: **라이트 테마 (Light Mode)**
+  - 다크 테마(Dark Mode) 지원 및 헤더 우측 토글 버튼 제공
+  - `localStorage`를 통해 사용자의 테마 선호도 영구 유지
+- **상세 뷰어 (PROJECT/view/...)**:
+  - 프로젝트 클릭 시 상단 컨트롤 바(이전/다음, 카운터, 닫기)와 함께 전체 고해상도 상세 이미지들이 세로로 스크롤되며 렌더링
+  - `ESC` 키 및 `ArrowLeft` / `ArrowRight` 키보드 내비게이션 기본 지원
+- **모바일 반응형 & 접근성**:
+  - 한글 텍스트 줄바꿈 방어: `word-break: keep-all;`, `overflow-wrap: break-word;`
+  - About 섹션 커리어 타임라인은 **기본 전체 펼침(Expanded by default)** 상태로 렌더링되며, 전체 접기/펼치기 버튼 지원
+  - 이미지 우선순위: `customImage` / `customDetailImages` 지정 시 해당 로컬 파일이 최우선 렌더링됨
+
+---
+
+## 5. GitHub Pages 배포 규약
+- `vite.config.ts`의 `base` 경로는 `./`로 설정하여 서브 경로 배포 시 에셋 404 방지
+- `.github/workflows/deploy.yml`을 통해 main/master 브랜치 푸시 시 자동 빌드 및 배포
+- `npm run build`를 통해 TypeScript 컴파일 및 번들링 에러 사전 검증 필수

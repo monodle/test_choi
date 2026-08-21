@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Sparkles,
   ArrowRight,
@@ -6,7 +6,6 @@ import {
   Zap,
   ShieldCheck,
   ChevronRight,
-  ExternalLink,
 } from 'lucide-react';
 import { ProfileInfo, AboutInfo, ProjectItem } from '../types/portfolio';
 import { TabType } from './Header';
@@ -79,9 +78,6 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
   // 대표작 선별: 메인 히어로 1개 + 후속 4개
   const heroFeaturedProject = projects[0] || null;
   const secondaryFeaturedProjects = projects.slice(1, 5);
-
-  const [activeHeroCardIdx, setActiveHeroCardIdx] = useState<number>(0);
-  const heroStackProjects = projects.slice(0, 3);
 
   const tickerKeywords =
     profile.tickerKeywords && profile.tickerKeywords.length > 0
@@ -174,76 +170,6 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
               </div>
             </div>
           </div>
-
-          {/* Right Column: Interactive Visual Showcase Stack */}
-          {heroStackProjects.length > 0 && (
-            <div className="designer-hero-right">
-              <div className="visual-showcase-frame">
-                <div className="showcase-header-bar">
-                  <span className="showcase-indicator">SELECTED PREVIEW</span>
-                  <span className="showcase-count">
-                    0{activeHeroCardIdx + 1} / 0{heroStackProjects.length}
-                  </span>
-                </div>
-
-                {/* Layered Showcase Cards */}
-                <div className="showcase-deck">
-                  {heroStackProjects.map((p, idx) => {
-                    const isActive = idx === activeHeroCardIdx;
-                    const displayImg = p.customImage || p.image;
-                    return (
-                      <div
-                        key={p.id}
-                        className={`showcase-deck-card ${isActive ? 'active' : 'stacked'}`}
-                        style={{
-                          zIndex: isActive ? 10 : 10 - idx,
-                          transform: isActive
-                            ? 'translateY(0) scale(1)'
-                            : `translateY(${idx * 14}px) scale(${1 - idx * 0.05})`,
-                          opacity: isActive ? 1 : 0.65 - idx * 0.2,
-                        }}
-                        onMouseEnter={() => setActiveHeroCardIdx(idx)}
-                        onClick={() => onSelectProject(p)}
-                      >
-                        <div className="deck-card-image-wrap">
-                          <img
-                            src={displayImg}
-                            alt={p.title}
-                            loading="eager"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).src = p.image;
-                            }}
-                          />
-                          <div className="deck-card-overlay">
-                            <span className="deck-tag">{p.category}</span>
-                            <h4 className="deck-title">{p.title}</h4>
-                            <div className="deck-action-hint">
-                              <span>Open Project</span>
-                              <ExternalLink size={14} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Showcase Navigation Bullets */}
-                <div className="showcase-bullets">
-                  {heroStackProjects.map((p, idx) => (
-                    <button
-                      key={p.id}
-                      className={`showcase-bullet-btn ${idx === activeHeroCardIdx ? 'active' : ''}`}
-                      onClick={() => setActiveHeroCardIdx(idx)}
-                      aria-label={`Preview ${p.title}`}
-                    >
-                      <span className="bullet-label">{p.title.slice(0, 16)}...</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 

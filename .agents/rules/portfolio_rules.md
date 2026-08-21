@@ -93,8 +93,10 @@ export interface PortfolioData {
   - `ESC` 키 및 `ArrowLeft` / `ArrowRight` 키보드 내비게이션 기본 지원
 - **모바일 반응형 & 접근성**:
   - 한글 텍스트 줄바꿈 방어: `word-break: keep-all;`, `overflow-wrap: break-word;`
-  - About 섹션 커리어 타임라인은 **기본 전체 펼침(Expanded by default)** 상태로 렌더링되며, 전체 접기/펼치기 버튼 지원
-  - 이미지 우선순위: `customImage` / `customDetailImages` 지정 시 해당 로컬 파일이 최우선 렌더링됨
+  - 이미지 우선순위: `image` (목록 썸네일) 및 `detailImages` (상세 뷰어) 경로를 통한 직접 지정
+- **PWA (Progressive Web App)**:
+  - 데스크톱(Chrome/Edge) 및 모바일(iOS 사파리 홈 화면 추가, Android Chrome) 앱 설치 지원
+  - `manifest.webmanifest`, 최소 pass-through `sw.js`, 192x192 / 512x512 PNG 아이콘 에셋 적용
 
 ---
 

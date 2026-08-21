@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import {
   Sparkles,
   ArrowRight,
@@ -29,6 +29,60 @@ const parseProjectDate = (d?: string) => {
   const normalized = d.replace(/,(\S)/, ', $1');
   const time = Date.parse(normalized);
   return isNaN(time) ? 0 : time;
+};
+
+const HEADLINE_SEGMENTS = [
+  { text: 'Where ', className: 'headline-text' },
+  { text: 'Aesthetics', className: 'text-em-italic' },
+  { text: ' Meet ', className: 'headline-text' },
+  { text: 'Precision', className: 'text-em-gradient' },
+  { text: '.', className: 'headline-dot' },
+];
+
+const TypewriterHeadline: React.FC = () => {
+  const fullLength = useMemo(
+    () => HEADLINE_SEGMENTS.reduce((acc, curr) => acc + curr.text.length, 0),
+    []
+  );
+  const [charCount, setCharCount] = useState(0);
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+    setCharCount(0);
+    setIsCompleted(false);
+
+    const timer = setInterval(() => {
+      index += 1;
+      setCharCount(index);
+      if (index >= fullLength) {
+        clearInterval(timer);
+        setIsCompleted(true);
+      }
+    }, 55);
+
+    return () => clearInterval(timer);
+  }, [fullLength]);
+
+  let remaining = charCount;
+
+  return (
+    <span className={`hero-line-main typewriter-headline ${isCompleted ? 'typing-finished' : ''}`}>
+      {HEADLINE_SEGMENTS.map((segment, sIdx) => {
+        if (remaining <= 0) return null;
+        const sliceLen = Math.min(remaining, segment.text.length);
+        const visibleSlice = segment.text.slice(0, sliceLen);
+        remaining -= sliceLen;
+
+        return (
+          <span key={sIdx} className={segment.className}>
+            {visibleSlice}
+          </span>
+        );
+      })}
+      <span className={`typing-cursor ${isCompleted ? 'completed' : ''}`} aria-hidden="true" />
+    </span>
+  );
 };
 
 const SpotlightMedia: React.FC<{ project: ProjectItem }> = ({ project }) => {
@@ -200,9 +254,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
 
             <h1 className="designer-hero-headline">
               <span className="hero-line-sub">Creative Direction & Visual Web Craft</span>
-              <span className="hero-line-main">
-                Where <span className="text-em-italic">Aesthetics</span> Meet <span className="text-em-gradient">Precision</span>.
-              </span>
+              <TypewriterHeadline />
             </h1>
 
             <p className="designer-hero-statement">

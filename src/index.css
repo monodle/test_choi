@@ -2695,6 +2695,49 @@ body {
   color: var(--text-primary);
 }
 
+/* Typewriter Headline & Cursor Visual Effects */
+.typewriter-headline {
+  display: inline-block;
+  min-height: 1.15em;
+  position: relative;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3.5px;
+  height: 0.82em;
+  background: var(--accent-gold);
+  margin-left: 6px;
+  vertical-align: -0.04em;
+  border-radius: 2px;
+  box-shadow: 0 0 12px var(--accent-glow, rgba(229, 184, 105, 0.7));
+  animation: cursorBlink 0.75s ease-in-out infinite;
+}
+
+.typing-cursor.completed {
+  animation: cursorBlink 0.75s ease-in-out infinite, cursorFadeOut 1.2s ease 2s forwards;
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scaleY(0.7);
+  }
+}
+
+@keyframes cursorFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (min-width: 640px) {
   .hero-line-main {
     font-size: 3.2rem;

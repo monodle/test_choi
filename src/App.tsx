@@ -85,12 +85,14 @@ export const App: React.FC = () => {
       </main>
 
       {/* Project Detail View Modal */}
-      <ProjectModal
-        project={selectedProject}
-        projects={projects}
-        onClose={() => setSelectedProject(null)}
-        onSelectProject={setSelectedProject}
-      />
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          projects={projects}
+          onClose={() => setSelectedProject(null)}
+          onSelectProject={setSelectedProject}
+        />
+      )}
 
       {/* Footer */}
       <Footer designerName={profile.name} />

@@ -1,9 +1,9 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { ProjectItem } from '../types/portfolio';
 import { X, ChevronLeft, ChevronRight, LayoutGrid, Calendar, Layers, ImageOff } from 'lucide-react';
 
 interface ProjectModalProps {
-  project: ProjectItem | null;
+  project: ProjectItem;
   projects: ProjectItem[];
   onClose: () => void;
   onSelectProject: (project: ProjectItem) => void;
@@ -15,29 +15,33 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   onClose,
   onSelectProject,
 }) => {
-  if (!project) return null;
-
   const currentIndex = projects.findIndex((p) => p.id === project.id);
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
+  // 1. Lock background body scroll while modal is open
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
+
+  // 2. Keyboard navigation listener
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
       if (e.key === 'ArrowLeft' && prevProject) onSelectProject(prevProject);
       if (e.key === 'ArrowRight' && nextProject) onSelectProject(nextProject);
-    },
-    [onClose, prevProject, nextProject, onSelectProject]
-  );
+    };
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.body.style.overflow = 'unset';
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleKeyDown]);
+  }, [onClose, prevProject, nextProject, onSelectProject]);
 
   // Determine list of detail images
   const customList = (project.customDetailImages || []).filter((url) => typeof url === 'string' && url.trim() !== '');

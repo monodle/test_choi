@@ -11,7 +11,6 @@ import { ProfileInfo, AboutInfo, ProjectItem } from '../types/portfolio';
 import { TabType } from './Header';
 import { ProjectCard } from './ProjectCard';
 import { ShootingStars } from './ShootingStars';
-import { CherryBlossom } from './CherryBlossom';
 import { Theme } from '../hooks/useTheme';
 
 interface HomeSectionProps {
@@ -104,11 +103,8 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
 
   return (
     <div className="home-container animate-fadeIn">
-      {/* Top Hero + Marquee Wrapper (Bounds Cherry Blossom Animation strictly above Featured Works) */}
+      {/* Top Hero + Marquee Wrapper */}
       <div className="home-hero-marquee-wrapper">
-        {/* Full-width Cherry Blossom Falling (Light Mode Only) */}
-        {theme === 'light' && <CherryBlossom key="cherry-light-blossom" />}
-
         {/* 1. DESIGNER EDITORIAL HERO SECTION */}
         <section className="designer-hero-section">
           {/* Ambient Visual Backdrops */}

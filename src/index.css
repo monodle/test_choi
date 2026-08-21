@@ -1252,6 +1252,7 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
+  flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
@@ -1266,6 +1267,7 @@ body {
   font-weight: 600;
   color: var(--text-muted);
   padding: 0 4px;
+  flex-shrink: 0;
 }
 
 .detail-close-btn {
@@ -1274,10 +1276,18 @@ body {
   color: var(--text-primary);
   width: 32px;
   height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  box-sizing: border-box;
   cursor: pointer;
   transition: var(--transition-fast);
   margin-left: 4px;
@@ -1287,6 +1297,10 @@ body {
   .detail-close-btn {
     width: 36px;
     height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    max-width: 36px;
+    max-height: 36px;
     margin-left: 8px;
   }
 }
@@ -2396,69 +2410,7 @@ body {
   }
 }
 
-/* ==========================================================================
-   CHERRY BLOSSOM & SAKURA FALLING (Light Mode Only, 100vw Full Width)
-   ========================================================================== */
-.cherry-blossom-wrapper {
-  display: none;
-  position: absolute;
-  top: -40px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: calc(100% + 40px);
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
 
-[data-theme="light"] .cherry-blossom-wrapper {
-  display: block;
-}
-
-.cherry-blossom-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-  pointer-events: none;
-  position: relative;
-  z-index: 1;
-}
-
-/* Gradual Soft Pink Ambient Background Tint */
-.sakura-ambient-tint {
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  max-width: 1400px;
-  height: 640px;
-  background: radial-gradient(
-    ellipse 75% 60% at 50% 35%,
-    rgba(255, 214, 226, 0.45) 0%,
-    rgba(255, 230, 238, 0.25) 45%,
-    transparent 75%
-  );
-  opacity: 0;
-  pointer-events: none;
-  z-index: 0;
-  animation: sakuraAmbientBlush 12s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
-  mask-image: radial-gradient(ellipse 70% 65% at 50% 40%, black 30%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 40%, black 30%, transparent 80%);
-}
-
-@keyframes sakuraAmbientBlush {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-}
 
 
 /* Designer Hero Layout */

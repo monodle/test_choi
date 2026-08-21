@@ -279,48 +279,6 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
         </div>
       </section>
 
-      {/* 4. DESIGN MANIFESTO & PHILOSOPHY (Editorial Layout) */}
-      <section className="home-manifesto-section">
-        <div className="manifesto-inner-grid">
-          <div className="manifesto-lead">
-            <div className="section-eyebrow">
-              <span>DESIGN MANIFESTO</span>
-            </div>
-            <h2 className="manifesto-big-title">
-              Crafting with <br />
-              <span className="text-em-italic">Purpose & Elegance.</span>
-            </h2>
-            <p className="manifesto-summary">
-              단순히 보기 좋은 그래픽을 넘어, 비즈니스의 목표와 사용자의 심리를 관통하는
-              디지털 인터페이스를 만듭니다.
-            </p>
-          </div>
-
-          <div className="manifesto-list">
-            {designPillars.map((pillar) => {
-              const Icon = getPillarIcon(pillar.icon);
-              return (
-                <div key={pillar.num} className="manifesto-item">
-                  <div className="manifesto-item-header">
-                    <span className="manifesto-num">{pillar.num}</span>
-                    <div className="manifesto-item-title-wrap">
-                      <h3 className="manifesto-title">{pillar.title}</h3>
-                      {pillar.subtitle && (
-                        <span className="manifesto-subtitle">{pillar.subtitle}</span>
-                      )}
-                    </div>
-                    <div className="manifesto-icon-box">
-                      <Icon size={18} />
-                    </div>
-                  </div>
-                  <p className="manifesto-desc">{pillar.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* 3. CURATED FEATURED WORKS (Cinematic Spotlight + Asymmetrical Grid) */}
       <section className="home-featured-section">
         <div className="section-header-row">
@@ -390,6 +348,49 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
           </button>
         </div>
       </section>
+
+      {/* 4. DESIGN MANIFESTO & PHILOSOPHY (Editorial Layout) */}
+      <section className="home-manifesto-section">
+        <div className="manifesto-inner-grid">
+          <div className="manifesto-lead">
+            <div className="section-eyebrow">
+              <span>DESIGN MANIFESTO</span>
+            </div>
+            <h2 className="manifesto-big-title">
+              Crafting with <br />
+              <span className="text-em-italic">Purpose & Elegance.</span>
+            </h2>
+            <p className="manifesto-summary">
+              단순히 보기 좋은 그래픽을 넘어, 비즈니스의 목표와 사용자의 심리를 관통하는
+              디지털 인터페이스를 만듭니다.
+            </p>
+          </div>
+
+          <div className="manifesto-list">
+            {designPillars.map((pillar) => {
+              const Icon = getPillarIcon(pillar.icon);
+              return (
+                <div key={pillar.num} className="manifesto-item">
+                  <div className="manifesto-item-header">
+                    <span className="manifesto-num">{pillar.num}</span>
+                    <div className="manifesto-item-title-wrap">
+                      <h3 className="manifesto-title">{pillar.title}</h3>
+                      {pillar.subtitle && (
+                        <span className="manifesto-subtitle">{pillar.subtitle}</span>
+                      )}
+                    </div>
+                    <div className="manifesto-icon-box">
+                      <Icon size={18} />
+                    </div>
+                  </div>
+                  <p className="manifesto-desc">{pillar.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
 
       {/* 5. CLIENT COLLABORATIONS & TRUST STRIP */}
       {about.clients && about.clients.length > 0 && (

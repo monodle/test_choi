@@ -46,21 +46,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
     };
   }, [onClose, prevProject, nextProject, onSelectProject]);
 
-  // 3. Scroll position detection for sticky header shrinking
-  useEffect(() => {
-    const overlay = overlayRef.current;
-    if (!overlay) return;
-
-    const handleScroll = () => {
-      setIsScrolled(overlay.scrollTop > 60);
-    };
-
-    overlay.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      overlay.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   // Reset scroll when switching project
   useEffect(() => {
     if (overlayRef.current) {
@@ -79,7 +64,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
   const handleOverlayScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const scrollTop = e.currentTarget.scrollTop;
-    setIsScrolled(scrollTop > 90);
+    setIsScrolled(scrollTop > 60);
   };
 
   return (

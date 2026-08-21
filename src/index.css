@@ -2239,20 +2239,19 @@ body {
   padding-bottom: 20px;
 }
 
-/* Dynamic Hero Visual Backdrop */
+/* Dynamic Hero Visual Backdrop (Strictly bounded from top of page down to marquee-section) */
 .hero-visual-backdrop {
   position: absolute;
-  top: -80px;
+  top: -60px;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  max-width: 1400px;
-  height: 600px;
+  height: calc(100% + 60px);
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
-  mask-image: radial-gradient(ellipse 70% 65% at 50% 40%, black 20%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 40%, black 20%, transparent 80%);
+  mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
 }
 
 .hero-grid-mesh {
@@ -2316,17 +2315,23 @@ body {
   display: block;
 }
 
-/* Meteors / Shooting Stars */
+/* Meteors / Shooting Stars (Fluid One-Shot Fall) */
 .shooting-star {
   position: absolute;
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, rgba(229, 184, 105, 0.4) 40%, rgba(255, 255, 255, 0.95) 100%);
+  width: var(--target-width, 180px);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(229, 184, 105, 0.3) 35%,
+    rgba(254, 240, 138, 0.75) 75%,
+    #ffffff 100%
+  );
   border-radius: 9999px;
   filter: drop-shadow(0 0 6px rgba(229, 184, 105, 0.8));
   opacity: 0;
-  transform-origin: left top;
-  transform: rotate(var(--angle, 40deg)) translateX(-80px);
-  animation: meteorFall var(--duration, 2.6s) cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
+  transform-origin: right center;
+  animation: meteorFallSmooth var(--duration, 20s) linear infinite;
   animation-delay: var(--delay, 0s);
   will-change: transform, opacity;
 }
@@ -2334,7 +2339,7 @@ body {
 .shooting-star::after {
   content: '';
   position: absolute;
-  right: 0;
+  right: -1px;
   top: 50%;
   transform: translateY(-50%);
   width: 4px;
@@ -2342,26 +2347,29 @@ body {
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 
-    0 0 6px 1px #ffffff,
-    0 0 12px 3px rgba(229, 184, 105, 0.9),
-    0 0 20px 6px rgba(229, 184, 105, 0.5);
+    0 0 8px 2px #ffffff,
+    0 0 14px 4px rgba(229, 184, 105, 0.9),
+    0 0 20px 5px rgba(229, 184, 105, 0.4);
 }
 
-@keyframes meteorFall {
+@keyframes meteorFallSmooth {
   0% {
     opacity: 0;
-    transform: rotate(var(--angle, 40deg)) translateX(-100px) scale(0.3);
+    transform: rotate(var(--angle, 38deg)) translateX(-150px);
   }
-  15% {
+  1.2% {
     opacity: 1;
-    transform: rotate(var(--angle, 40deg)) translateX(20px) scale(1);
   }
-  70% {
-    opacity: 0.95;
+  7.5% {
+    opacity: 1;
+  }
+  9.5% {
+    opacity: 0;
+    transform: rotate(var(--angle, 38deg)) translateX(750px);
   }
   100% {
     opacity: 0;
-    transform: rotate(var(--angle, 40deg)) translateX(480px) scale(0.2);
+    transform: rotate(var(--angle, 38deg)) translateX(750px);
   }
 }
 
@@ -2395,23 +2403,18 @@ body {
   }
 }
 
-/* Hero + Marquee Unified Wrapper (Strictly bounding cherry blossom falling) */
-.home-hero-marquee-wrapper {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
+/* Shooting Stars Wrapper (Full Browser Width 100%) */
+.shooting-stars-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
 }
-
-@media (min-width: 768px) {
-  .home-hero-marquee-wrapper {
-    gap: 80px;
-  }
-}
-
-
-
 
 /* Designer Hero Layout */
 .designer-hero-grid {

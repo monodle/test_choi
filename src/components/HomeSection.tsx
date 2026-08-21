@@ -103,113 +103,110 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
 
   return (
     <div className="home-container animate-fadeIn">
-      {/* Top Hero + Marquee Wrapper */}
-      <div className="home-hero-marquee-wrapper">
-        {/* 1. DESIGNER EDITORIAL HERO SECTION */}
-        <section className="designer-hero-section">
-          {/* Ambient Visual Backdrops */}
-          <div className="hero-visual-backdrop" aria-hidden="true">
-            <div className="hero-aurora-blob hero-aurora-1" />
-            <div className="hero-aurora-blob hero-aurora-2" />
-            <div className="hero-grid-mesh" />
-            {theme === 'dark' && <ShootingStars />}
-          </div>
+      {/* 1. DESIGNER EDITORIAL HERO SECTION (상단부터 Marquee 바로 위까지) */}
+      <section className="designer-hero-section">
+        {/* Ambient Visual Backdrops (Hero Section Boundary) */}
+        <div className="hero-visual-backdrop" aria-hidden="true">
+          <div className="hero-aurora-blob hero-aurora-1" />
+          <div className="hero-aurora-blob hero-aurora-2" />
+          <div className="hero-grid-mesh" />
+          {theme === 'dark' && <ShootingStars />}
+        </div>
 
-          <div className="designer-hero-grid">
-            {/* Left Column: Editorial Typography & Persona */}
-            <div className="designer-hero-left">
-              <div className="hero-meta-pill-group">
-                <span className="designer-badge-tag">
-                  <Sparkles size={13} className="sparkle-pulse" />
-                  {profile.role || 'Senior Digital & Web Designer'}
-                </span>
-                <span className="availability-tag">
-                  <span className="live-pulse-dot" />
-                  Available for Selected Projects
-                </span>
+        <div className="designer-hero-grid">
+          {/* Left Column: Editorial Typography & Persona */}
+          <div className="designer-hero-left">
+            <div className="hero-meta-pill-group">
+              <span className="designer-badge-tag">
+                <Sparkles size={13} className="sparkle-pulse" />
+                {profile.role || 'Senior Digital & Web Designer'}
+              </span>
+              <span className="availability-tag">
+                <span className="live-pulse-dot" />
+                Available for Selected Projects
+              </span>
+            </div>
+
+            <h1 className="designer-hero-headline">
+              <span className="hero-line-sub">Creative Direction & Visual Web Craft</span>
+              <span className="hero-line-main">
+                Where <span className="text-em-italic">Aesthetics</span> Meet <span className="text-em-gradient">Precision</span>.
+              </span>
+            </h1>
+
+            <p className="designer-hero-statement">
+              {profile.bio ||
+                '디자인의 본질과 직관적인 사용자 경험, 웹 표준 기술을 융합하여 20년간 수많은 브랜드의 가치를 시각화해 온 웹 & 디지털 디자이너 최진원입니다.'}
+            </p>
+
+            {/* Quick Actions */}
+            <div className="designer-hero-actions">
+              <button
+                onClick={() => onNavigate('PROJECTS')}
+                className="designer-btn primary"
+                aria-label="Explore all projects"
+              >
+                <span>Explore All Works ({projects.length})</span>
+                <ArrowRight size={16} />
+              </button>
+              <button
+                onClick={() => onNavigate('ABOUT')}
+                className="designer-btn secondary"
+                aria-label="About the designer"
+              >
+                <span>About Atelier</span>
+              </button>
+              <button
+                onClick={() => onNavigate('CONTACT')}
+                className="designer-btn ghost"
+                aria-label="Contact designer"
+              >
+                <span>Get in Touch</span>
+              </button>
+            </div>
+
+            {/* Editorial Quick Index Strip (Replacing clunky SaaS metric boxes) */}
+            <div className="designer-editorial-index">
+              <div className="editorial-index-item" onClick={() => onNavigate('PROJECTS')}>
+                <span className="index-num">{projects.length}+</span>
+                <span className="index-label">Curated Projects</span>
               </div>
-
-              <h1 className="designer-hero-headline">
-                <span className="hero-line-sub">Creative Direction & Visual Web Craft</span>
-                <span className="hero-line-main">
-                  Where <span className="text-em-italic">Aesthetics</span> Meet <span className="text-em-gradient">Precision</span>.
-                </span>
-              </h1>
-
-              <p className="designer-hero-statement">
-                {profile.bio ||
-                  '디자인의 본질과 직관적인 사용자 경험, 웹 표준 기술을 융합하여 20년간 수많은 브랜드의 가치를 시각화해 온 웹 & 디지털 디자이너 최진원입니다.'}
-              </p>
-
-              {/* Quick Actions */}
-              <div className="designer-hero-actions">
-                <button
-                  onClick={() => onNavigate('PROJECTS')}
-                  className="designer-btn primary"
-                  aria-label="Explore all projects"
-                >
-                  <span>Explore All Works ({projects.length})</span>
-                  <ArrowRight size={16} />
-                </button>
-                <button
-                  onClick={() => onNavigate('ABOUT')}
-                  className="designer-btn secondary"
-                  aria-label="About the designer"
-                >
-                  <span>About Atelier</span>
-                </button>
-                <button
-                  onClick={() => onNavigate('CONTACT')}
-                  className="designer-btn ghost"
-                  aria-label="Contact designer"
-                >
-                  <span>Get in Touch</span>
-                </button>
+              <span className="index-divider">/</span>
+              <div className="editorial-index-item" onClick={() => onNavigate('ABOUT')}>
+                <span className="index-num">20+</span>
+                <span className="index-label">Years of Craft</span>
               </div>
-
-              {/* Editorial Quick Index Strip (Replacing clunky SaaS metric boxes) */}
-              <div className="designer-editorial-index">
-                <div className="editorial-index-item" onClick={() => onNavigate('PROJECTS')}>
-                  <span className="index-num">{projects.length}+</span>
-                  <span className="index-label">Curated Projects</span>
-                </div>
-                <span className="index-divider">/</span>
-                <div className="editorial-index-item" onClick={() => onNavigate('ABOUT')}>
-                  <span className="index-num">20+</span>
-                  <span className="index-label">Years of Craft</span>
-                </div>
-                <span className="index-divider">/</span>
-                <div className="editorial-index-item" onClick={() => onNavigate('ABOUT')}>
-                  <span className="index-num">{about.clients?.length || 39}+</span>
-                  <span className="index-label">Brand Partnerships</span>
-                </div>
+              <span className="index-divider">/</span>
+              <div className="editorial-index-item" onClick={() => onNavigate('ABOUT')}>
+                <span className="index-num">{about.clients?.length || 39}+</span>
+                <span className="index-label">Brand Partnerships</span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 2. INFINITE TICKER STRIP */}
-        <section className="marquee-section" aria-hidden="true">
-          <div className="marquee-track">
-            <div className="marquee-content">
-              {tickerKeywords.concat(tickerKeywords).map((keyword, idx) => (
-                <span key={idx} className="marquee-item">
-                  <span className="marquee-bullet">✦</span>
-                  {keyword}
-                </span>
-              ))}
-            </div>
-            <div className="marquee-content" aria-hidden="true">
-              {tickerKeywords.concat(tickerKeywords).map((keyword, idx) => (
-                <span key={`dup-${idx}`} className="marquee-item">
-                  <span className="marquee-bullet">✦</span>
-                  {keyword}
-                </span>
-              ))}
-            </div>
+      {/* 2. INFINITE TICKER STRIP (브라우저 가로 100% 영역) */}
+      <section className="marquee-section" aria-hidden="true">
+        <div className="marquee-track">
+          <div className="marquee-content">
+            {tickerKeywords.concat(tickerKeywords).map((keyword, idx) => (
+              <span key={idx} className="marquee-item">
+                <span className="marquee-bullet">✦</span>
+                {keyword}
+              </span>
+            ))}
           </div>
-        </section>
-      </div>
+          <div className="marquee-content" aria-hidden="true">
+            {tickerKeywords.concat(tickerKeywords).map((keyword, idx) => (
+              <span key={`dup-${idx}`} className="marquee-item">
+                <span className="marquee-bullet">✦</span>
+                {keyword}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 3. CURATED FEATURED WORKS (Cinematic Spotlight + Asymmetrical Grid) */}
       <section className="home-featured-section">

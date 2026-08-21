@@ -17,9 +17,6 @@ export interface ProfileInfo {
   name: string;
   role: string;
   bio: string;
-  email: string;
-  address: string;
-  tagline: string;
 }
 
 export interface ExperienceItem {

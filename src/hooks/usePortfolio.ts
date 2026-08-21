@@ -6,9 +6,6 @@ const initialEmptyData: PortfolioData = {
     name: '',
     role: '',
     bio: '',
-    email: '',
-    address: '',
-    tagline: '',
   },
   about: {
     intro: '',
